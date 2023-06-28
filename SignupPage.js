@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SignUpPage.css'; 
 
 const SignupPage = () => {
   const [formData, setFormData] = useState({
@@ -18,11 +19,11 @@ const SignupPage = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container"> {/* Apply the CSS class to the main container */}
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
+          Name
           <input
             type="text"
             name="name"
@@ -33,7 +34,7 @@ const SignupPage = () => {
         </label>
         <br />
         <label>
-          Email:
+          Email
           <input
             type="email"
             name="email"
@@ -44,7 +45,7 @@ const SignupPage = () => {
         </label>
         <br />
         <label>
-          Password:
+          Password
           <input
             type="password"
             name="password"
